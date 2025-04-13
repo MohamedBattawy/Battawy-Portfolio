@@ -45,7 +45,8 @@ export const Projects = () => {
               {/* Stats Image with low opacity */}
               <div className="relative mb-4">
                 <img
-                  src="/stats.png"
+                  // src="/stats.png" remove . when testing locally
+                  src="./stats.png"
                   alt="Project Statistics"
                   className="w-full h-auto rounded-md opacity-40 transition-opacity hover:opacity-80"
                 />
