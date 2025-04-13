@@ -1,0 +1,139 @@
+@import "tailwindcss";
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes star-animation {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Space Grotesk", sans-serif;
+  color: #f3f4f6;
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(-45deg, #1a1a2e, #16213e, #0f3460, #533483);
+  background-size: 400% 400%;
+  animation: gradient 5s ease infinite;
+  position: relative;
+  overflow-x: hidden;
+  /* Prevent overscroll background issues */
+  overscroll-behavior: none;
+}
+
+/* Extended background element to prevent white spaces during overscroll */
+body::before {
+  content: "";
+  position: fixed;
+  top: -50vh;
+  left: -50vw;
+  right: -50vw;
+  bottom: -50vh;
+  z-index: -2;
+  background: inherit;
+  background-attachment: fixed;
+}
+
+/* Particle effect - first layer */
+.particle-layer1 {
+  content: "";
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+  background: radial-gradient(white, rgba(255, 255, 255, 0.2) 2px, transparent 3px);
+  background-size: 50px 50px;
+  opacity: 0.2;
+  animation: star-animation 15s linear infinite;
+}
+
+/* Particle effect - second layer */
+.particle-layer2 {
+  content: "";
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+  background: radial-gradient(white, rgba(255, 255, 255, 0.1) 1px, transparent 2px);
+  background-size: 30px 30px;
+  background-position: 25px 25px;
+  opacity: 0.15;
+  animation: star-animation 20s linear infinite;
+}
+
+@layer utilities {
+  @keyframes blink {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+
+  .animate-blink {
+    animation: blink 0.8s step-end infinite;
+  }
+
+  @keyframes loading {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(250%);
+    }
+  }
+
+  .animate-loading-bar {
+    animation: loading 0.8s ease infinite;
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
