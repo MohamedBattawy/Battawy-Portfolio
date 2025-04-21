@@ -107,7 +107,7 @@ export const Projects = () => {
                   </a>
                   <a
                     href="https://github.com/MohamedBattawy/Car-Rental-System"
-                    className="text-blue-400 hover:text-blue-300 transition-colors my-4"
+                    className="text-blue-400 hover:text-blue-300 transition-colors"
                   >
                     Source Code →
                   </a>
