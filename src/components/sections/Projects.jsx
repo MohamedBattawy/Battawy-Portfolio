@@ -70,7 +70,14 @@ export const Projects = () => {
               </div>
             </div>
             
-            <div className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition">
+            <div
+              className="
+              glass p-6 rounded-xl border border-white/10 
+              hover:-translate-y-1 hover:border-blue-500/30
+              hover:shadow-[0_4px_20px_rgba(59,130,246,0.1)]
+              transition-all
+            "
+            >
               <h3 className="text-xl font-bold mb-2">Threadscape</h3>
               <p className="text-gray-400 mb-4">
                 Full Stack clothing e-commerce platform with real-time inventory management and product promotion, admin only privileges, order-tracking and cart management.
