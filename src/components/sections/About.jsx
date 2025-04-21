@@ -2,7 +2,7 @@ import { RevealOnScroll } from "../RevealOnScroll";
 
 export const About = () => {
     const frontendSkills = ["React.js", "Next.js", "TailwindCSS", "Typescript"];
-    const backendSkills = ["Node.js", "PHP", "MySQL", "MongoDB", "GraphQL"];
+    const backendSkills = ["Node.js", "PHP", "PostgreSQL/MySQL", "MongoDB", "GraphQL"];
     const aiMlSkills = ["NumPy", "OpenCV", "Pandas", "PyTorch", "Scikit-learn", "Matplotlib", "NLTK"];
     
     const achievements = [
