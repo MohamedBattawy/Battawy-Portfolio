@@ -98,12 +98,20 @@ export const Projects = () => {
               </div>
 
               <div className="flex justify-between items-center">
-                <a
-                  href="https://github.com/MohamedBattawy/Car-Rental-System"
-                  className="text-blue-400 hover:text-blue-300 transition-colors my-4"
-                >
-                  Source Code →
-                </a>
+                <div className="flex flex-col">
+                  <a
+                    href="https://threadscape-frontend.onrender.com/"
+                    className="text-blue-400 hover:text-blue-300 transition-colors mb-2"
+                  >
+                    View Project →
+                  </a>
+                  <a
+                    href="https://github.com/MohamedBattawy/Car-Rental-System"
+                    className="text-blue-400 hover:text-blue-300 transition-colors my-4"
+                  >
+                    Source Code →
+                  </a>
+                </div>
               </div>
             </div>
 
