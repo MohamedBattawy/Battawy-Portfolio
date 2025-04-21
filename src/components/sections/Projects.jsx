@@ -76,7 +76,7 @@ export const Projects = () => {
                 Full Stack clothing e-commerce platform with real-time inventory management and product promotion, admin only privileges, order-tracking and cart management.
               </p>
               <div className="flex flex-wrap gap-2 mb-4">
-                {["Node.js", "Express.js", "Next.js", "PostgreSQL","Prisma","Zod","Typescript"].map((tech, key) => (
+                {["Node.js", "Express.js", "Next.js", "PostgreSQL","Prisma","Zod","Typescript", "TailwindCSS"].map((tech, key) => (
                   <span
                     key={key}
                     className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 
