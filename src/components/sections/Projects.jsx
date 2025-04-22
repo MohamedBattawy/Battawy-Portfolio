@@ -107,7 +107,7 @@ export const Projects = () => {
               <div className="flex justify-between items-center">
                 <div className="flex flex-col">
                   <a
-                    href="https://threadscape-frontend.onrender.com/"
+                    href="https://threadscape-frontend.vercel.app/"
                     className="text-blue-400 hover:text-blue-300 transition-colors mb-2"
                   >
                     View Project →
